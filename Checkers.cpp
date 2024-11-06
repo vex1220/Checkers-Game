@@ -144,11 +144,11 @@ Piece Player::selectPiece(sf::RenderWindow& window, CheckerBoard& board, const s
         {
             pieces.at(u).setColor(sf::Color::Green);
             pieces.at(u).drawPiece(window, getPiece(u).getPositionX(), getPiece(u).getPositionY());
-            std::cout << "You are hovering nigga" << std::endl;
+            std::cout << "You are hovering" << std::endl;
 
             if (event.button == sf::Event::MouseButtonPressed) {
                 if (event.button == sf::Mouse::Left) {
-                    std::cout << "You clicked on a button nigga" << std::endl;
+                    std::cout << "You clicked on a button " << std::endl;
                     return getPiece(u);
                 }
 
@@ -181,7 +181,7 @@ void Player::movePiece(Piece piece, sf::RenderWindow& window, CheckerBoard& boar
             {
                 if (event.button== sf::Event::MouseButtonPressed) {
                     if (event.button == sf::Mouse::Left) {
-                        std::cout << "You clicked on a button nigga" << std::endl;
+                        std::cout << "You clicked on a button" << std::endl;
                         piece.setPositionX(board.getX(x,y)); piece.setPositionY(board.getY(x,y));
                         std::cout << "Piece has successfully moved" << std::endl;
                     }
